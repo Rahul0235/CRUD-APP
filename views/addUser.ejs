@@ -1,0 +1,30 @@
+<%- include('layouts/header') %>
+
+<div class="container" style="margin-block: 6rem;">
+    <span class=" bg-dark text-light p-3  rounded rounded-3 ">Add User <i class="fa-regular fa-address-card"></i></span>
+    <div class="container mt-5 p-5 border border-1 border-dark rounded rounded-5 w-50">
+        <form action="/addUser" method="post" enctype="multipart/form-data">
+            <div class="mb-3">
+              <label for="exampleInputName" class="form-label">Name</label>
+              <input type="text" class="form-control border border-1 border-dark" name="name" id="exampleInputName">
+            </div>
+            <div class="mb-3">
+              <label for="exampleInputEmail1" class="form-label">Email address</label>
+              <input type="email" class="form-control border border-1 border-dark" name="email" id="exampleInputEmail1" aria-describedby="emailHelp">
+              <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+            </div>
+            <div class="mb-3">
+              <label for="exampleInputPhone" class="form-label">Phone</label>
+              <input type="text" class="form-control border border-1 border-dark" name="phone" id="exampleInputPhone">
+            </div>
+            <div>
+                <label for="exampleInputImage" class="form-label">Upload Your Image</label>
+                <input type="file" class="form-control border border-1 border-dark" name="image" id="exampleInputImage">
+            </div>
+            <button type="submit" class="btn btn-outline-dark mt-3">Submit</button>
+          </form>
+    </div>
+
+</div>
+
+<%- include('layouts/footer') %>
